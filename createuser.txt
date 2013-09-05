@@ -1,0 +1,178 @@
+<!-- Wrap all page content here -->
+<div id="wrap" class="target">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+
+                </button> <a class="navbar-brand" href="#">Project name</a>
+
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" class="">Home</a>
+
+                    </li>
+                    <li><a href="#about" class="">About</a>
+
+                    </li>
+                    <li><a href="#contact" class="">Contact</a>
+
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+
+                        <ul
+                        class="dropdown-menu">
+                            <li><a href="#" class="">Action</a>
+
+                            </li>
+                            <li><a href="#" class="">Another action</a>
+
+                            </li>
+                            <li><a href="#" class="">Something else here</a>
+
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#" class="">Separated link</a>
+
+                            </li>
+                            <li><a href="#" class="">One more separated link</a>
+
+                            </li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="page-header">
+             <h1 class="">Create User Form</h1>
+
+            <p class="">Follow M0 numbers in sequence unless otherwise directed.</p>
+            <form role="form"
+            class="">
+                <div id="newPatient" class="">
+                    
+                        
+                        <div class="form-group">
+                            <input type="radio" id="reasonforcare1" name="reasonForCare" value="start"
+                            class="" contenteditable="false">Start of Care &nbsp;
+                            <input type="radio" id="reasonforcare2" name="reasonForCare"
+                            value="resume" class="" contenteditable="false">Resumption of Care Date:</div>
+                        <div class="form-group">
+                            <label class="sr-only" for="reasonforcaredate">Time In</label>
+                            <input type="date" class="form-control" id="reasonforcaredate"
+                            name="date" contenteditable="false">Time In:
+                            <label class="sr-only" for="timein">Time In</label>
+                            <input type="time" class="form-control" id="timein" name="timeIn"
+                            contenteditable="false">Time Out:
+                            <label class="sr-only" for="timeout">Time Out</label>
+                            <input type="time" class="form-control" id="timeout" name="timeOut"
+                            contenteditable="false">
+                        <div class="row">
+                        </div>
+                        <hr class="">
+                        <div class="col-md-6">(M0D10)CMS Certification Number: (Locator 5)
+                            <input type="text" class="form-control"
+                            name="CMScertNum" contenteditable="false">
+                            <div id="box" class="">Branch ID (M0014) Branch State:
+                                <input type="text" class="form-control"
+                                name="branchState" contenteditable="false">(M0016)Branch ID Number:
+                                <input type="text" class="form-control" name="branchIDnum"
+                                contenteditable="false">
+                            </div>
+                            <div id="box" class="">(M0018)National Provider Identifier(NPI) for the attending physician who
+                                has signed the plan of care
+                                <input type="text" class="form-control" name="NPI"
+                                id="NPI">
+                                <input type="checkbox" name="NPI" value="unknown" id="chkNPI" class="">UK - Unknown or Not Available
+                              <br> Phone: (Locator 24)
+                                <input type="text" class="form-control"
+                                name="drTN" placeholder="___-___-____">Name: (Locator 24)
+                                <input type="text" class="form-control" name="drFName"
+                                placeholder="First Name">
+                                <input type="text" class="form-control" name="drMI" placeholder="M.I.">
+                                <input type="text" class="form-control" name="drLName" placeholder="Last Name">Address:(Locator 24)
+                                <input type="text" class="form-control" name="streetAdd"
+                                placeholder="Street/Apt. No.">
+                                <input type="text" class="form-control" name="cityAdd" placeholder="City">
+                                <input type="text" class="form-control" name="stateAdd" placeholder="State">
+                                <input type="text" class="form-control" name="zipAdd" placeholder="Zip Code">
+                                <hr class="">Secondary Referring Physician ID:
+                                <input type="text" class="form-control"
+                                name="2ndNPI">Phone:
+                                <input type="text" class="form-control" name="2nddrTN">Name: (Locator 24)
+                                <input type="text" class="form-control" name="2nddrFName"
+                                placeholder="First Name">
+                                <br class="">
+                                <input type="text" class="form-control" name="2nddrMI" placeholder="M.I.">
+                                <br class="">
+                                <input type="text" class="form-control" name="2nddrLName" placeholder="Last Name">
+                                <hr class="">(M0020)(Locator 4) Patient ID Number:
+                                <input type="text" class="form-control"
+                                name="ptID">Medical Record Number if different then M0020:
+                                <input type="text" class="form-control"
+                                name="MRN">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div id="box" class="">(M0030)Start of Care Date:
+                                <input type="date" class="form-control" name="SoCDate">(M0032)Resumption of Care Date:
+                                <input type="date" class="form-control"
+                                name="RoCDate">
+                                <input type="checkbox" name="checkRoCDate" class="">NA-Not Applicable (M0040)
+                              <br>Patient Name:
+                                <input type="text" class="form-control"
+                                name="ptFName" placeholder="First Name">
+                                <input type="text" class="form-control" name="ptMI" placeholder="M.I.">
+                                <input type="text" class="form-control" name="ptLName" placeholder="Last Name">Patient Phone:
+                                <input type="text" class="form-control" name="ptTN" placeholder="___-___-____">Patient Address(Locator 6):
+                                <input type="text" class="form-control" name="ptStreetAdd"
+                                placeholder="Street/Apt No.">
+                                <input type="text" class="form-control" name="ptCityAdd" placeholder="City">(M0050)(Locator 6)Patient State Residence:
+                                <input type="text" class="form-control"
+                                name="ptStateAdd" placeholder="__">(M0060)(Locator 6)Patient Zip Code:
+                                <input type="text" class="form-control"
+                                name="ptZipAdd" placeholder="">(M0063)Medicare Number:
+                                <input type="text" class="form-control" name="ptMedicare"
+                                placeholder="include suffix">
+                                <input type="checkbox" name="MedicareNA" class="">NA-No Medicare (M0064)
+                              <br> Social Security Number:
+                                <input type="text" class="form-control"
+                                name="ptSSS" placeholder="___-__-____">
+                                <input type="checkbox" name="SSSNA" class="">UK-Unknown or Not Available (M0065)
+                              <br> Medicaid Number:
+                                <input type="text"
+                                class="form-control" name="ptMedicaid">
+                                <input type="checkbox" name="MedicaidNA" class="">NA-No Medicaid (M0066)
+                              <br> (Locator 8)Birth Date:
+                                <input type="date" class="form-control">(Locator 1)Patient HI Claim Number:
+                                <input type="radio" name="ptHIclaim"
+                                value="ptMedicare" class="">1-Same as M0063
+                                <input type="radio" name="ptHIclaim" value="ptMedicaid"
+                                class="">2-Same as M0065
+                                <input type="radio" name="ptHIclaim" value="other" class="">Other:
+                                <input type="text" class="form-control" name="ptHIclaim">
+                            </div>
+                        </div>
+                    </div>
+                    <br class="">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="footer" class="">
+    <div class="container">
+        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk" class="">Martin Bean</a> and
+            <a
+            href="http://ryanfait.com/sticky-footer/" class="">Ryan Fait</a>.</p>
+    </div>
+</div>
