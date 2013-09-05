@@ -66,101 +66,293 @@
 	
         <div id="newpatient"
         class="">
-            <form class="form-inline" role="form" align="center">
-                <input type="radio" id="reasonforcare1" name="reasonForCare" value="start"
-                class="">Start of Care &nbsp;
-                <input type="radio" id="reasonforcare2" name="reasonForCare"
-                value="resume" class="">Resumption of Care Date:
-                <div class="form-group">Date:
-                    <label class="sr-only" for="reasonforcaredate">date</label>
-                    <input type="date" class="form-control" id="reasonforcaredate"
-                    name="date">
-                </div>
-                <div class="form-group">Time In:
-                    <label class="sr-only" for="timein">Time In</label>
-                    <input type="time" class="form-control" id="timein" name="timeIn">
-                </div>
-                <div class="form-group">Time Out:
-                    <label class="sr-only" for="timeout">Time Out</label>
-                    <input type="time" class="form-control" id="timeout" name="timeOut">
-                </div>
-            </form>
+            
+	<div class="row">
+		<form class="form-inline" role="form">
+			<div class="col-md-4">
+				<div class="radio">
+					<label class="label label-default">
+						<input type="radio" name="reasonForCare" value="start"> 
+						Start of Care &nbsp;
+					</label>
+				</div>			
+				<div class="radio">
+					<label class="label label-default">
+						<input type="radio" id="reasonforcare2" name="reasonForCare" value="resume">
+						Resumption of Care Date:
+					</label>
+				</div>  
+			</div>
+			<div class="col-md-8">
+					<div class="form-group">
+						<label class="label label-info" for="reasonforcaredate">Date:</label>
+						<input type="date" class="form-control input-sm" id="reasonforcaredate" name="date">
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="timein">Time In</label>
+						<input type="time" class="form-control input-sm" id="timein" name="timeIn">
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="timeout">Time Out</label>
+						<input type="time" class="form-control input-sm" id="timeout" name="timeOut">
+					</div>
+			</div>
+		</form>
+	</div>           
             <hr class="">
             <form role="form" class="">
-                <div class="col-md-6">M0D10)CMS Certification Number: (Locator 5)
-                    <input type="text" class="form-control"
-                    name="CMScertNum">Branch ID (M0014) Branch State:
-                    <input type="text" class="form-control"
-                    name="branchState">(M0016)Branch ID Number:
-                    <input type="text" class="form-control" name="branchIDnum">(M0018)National Provider Identifier(NPI) for the attending physician who
-                    has signed the plan of care
-                    <input type="text" class="form-control" name="NPI"
-                    id="NPI">
-                    <input type="checkbox" name="NPI" value="unknown" id="chkNPI" class="">UK - Unknown or Not Available
-                    <br class="">Phone: (Locator 24)
-                    <input type="text" class="form-control" name="drTN"
-                    placeholder="___-___-____">Name: (Locator 24)
-                    <input type="text" class="form-control" name="drFName"
-                    placeholder="First Name">
-                    <input type="text" class="form-control" name="drMI" placeholder="M.I.">
-                    <input type="text" class="form-control" name="drLName" placeholder="Last Name">Address:(Locator 24)
-                    <input type="text" class="form-control" name="streetAdd"
-                    placeholder="Street/Apt. No.">
-                    <input type="text" class="form-control" name="cityAdd" placeholder="City">
-                    <input type="text" class="form-control" name="stateAdd" placeholder="State">
-                    <input type="text" class="form-control" name="zipAdd" placeholder="Zip Code">
-                    <hr class="">Secondary Referring Physician ID:
-                    <input type="text" class="form-control"
-                    name="2ndNPI">Phone:
-                    <input type="text" class="form-control" name="2nddrTN">Name: (Locator 24)
-                    <input type="text" class="form-control" name="2nddrFName"
-                    placeholder="First Name">
-                    <br class="">
-                    <input type="text" class="form-control" name="2nddrMI" placeholder="M.I.">
-                    <br class="">
-                    <input type="text" class="form-control" name="2nddrLName" placeholder="Last Name">
-                    <hr class="">(M0020)(Locator 4) Patient ID Number:
-                    <input type="text" class="form-control"
-                    name="ptID">Medical Record Number if different then M0020:
-                    <input type="text" class="form-control"
-                    name="MRN">
+			<div class="row">
+                <div class="col-md-6">
+					<div class="form-group">
+						<label class="label label-info" for="CMScertNum">M0D10)CMS Certification Number: (Locator 5)</label>					
+						<input type="text" class="form-control input-sm" id="CMScertNum" name="CMScertNum">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="branchState">Branch ID (M0014) Branch State:</label>					
+						<input type="text" class="form-control input-sm" id="branchState" name="branchState">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="branchIDnum">(M0016)Branch ID Number:</label>					
+						<input type="text" class="form-control input-sm" id="branchIDnum" name="branchIDnum">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" for="NPI">(M0018)National Provider Identifier(NPI) for the attending physician who has signed the plan of care</label>					
+						<input type="text" class="form-control input-sm" id="NPI" name="NPI">					
+					</div>				
+					<label class="checkbox">
+						<input type="checkbox" name="NPI" value="unknown" id="chkNPI" class="">UK - Unknown or Not Available
+                    </label>
+					<br class="">
+					<div class="form-group">
+						<label class="label label-info" for="drTN">Phone: (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="drTN" name="drTN" placeholder="___-___-____">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="drFName">Name: (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="drFName" name="drFName" placeholder="First Name">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" class="sr-only" for="drMI">MI: (Locator24)</label>					
+						<input type="text" class="form-control input-sm" id="drMI" name="drMI" placeholder="M.I.">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" class="sr-only" for="drLName">Last Name: (Locator24)</label>					
+						<input type="text" class="form-control input-sm" id="drLName" name="drLName" placeholder="Last Name">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" for="streetAdd">Address:(Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="streetAdd" name="streetAdd" placeholder="Street/Apt. No.">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" class="sr-only" for="cityAdd">City (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="cityAdd" name="cityAdd" placeholder="City">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" class="sr-only" for="stateAdd">State (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="stateAdd" name="stateAdd" placeholder="State">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" class="sr-only" for="zipAdd">Zip Code (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="zipAdd" name="zipAdd" placeholder="Zip Code">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" for="2ndNPI">Secondary Referring Physician ID:</label>					
+						<input type="text" class="form-control input-sm" id="2ndNPI" name="2ndNPI">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" for="2nddrTN">Phone:</label>					
+						<input type="text" class="form-control input-sm" id="2nddrTN" name="2nddrTN">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" for="2nddrFName">Name: (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="2nddrFName" name="2nddrFName" placeholder="First Name">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" class="sr-only" for="2nddrMI">MI: (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="2nddrMI" name="2nddrMI" placeholder="M.I.">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" class="sr-only" for="2nddrLName">Last Name: (Locator 24)</label>					
+						<input type="text" class="form-control input-sm" id="2nddrLName" name="2nddrLName" placeholder="Last Name">					
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" for="ptID">(M0020)(Locator 4) Patient ID Number:</label>					
+						<input type="text" class="form-control input-sm" id="ptID" name="ptID">					
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="MRN">Medical Record Number if different then M0020:</label>					
+						<input type="text" class="form-control input-sm" id="MRN" name="MRN">			
+					</div>   
                 </div>
-                <div class="col-md-6">(M0030)Start of Care Date:
-                    <input type="date" class="form-control" name="SoCDate">(M0032)Resumption of Care Date:
-                    <input type="date" class="form-control"
-                    name="RoCDate">
-                    <input type="checkbox" name="checkRoCDate" class="">NA-Not Applicable (M0040)
-                    <br class="">Patient Name:
-                    <input type="text" class="form-control" name="ptFName" placeholder="First Name">
-                    <input type="text" class="form-control" name="ptMI" placeholder="M.I.">
-                    <input type="text" class="form-control" name="ptLName" placeholder="Last Name">Patient Phone:
-                    <input type="text" class="form-control" name="ptTN" placeholder="___-___-____">Patient Address(Locator 6):
-                    <input type="text" class="form-control" name="ptStreetAdd"
-                    placeholder="Street/Apt No.">
-                    <input type="text" class="form-control" name="ptCityAdd" placeholder="City">(M0050)(Locator 6)Patient State Residence:
-                    <input type="text" class="form-control"
-                    name="ptStateAdd" placeholder="__">(M0060)(Locator 6)Patient Zip Code:
-                    <input type="text" class="form-control"
-                    name="ptZipAdd" placeholder="">(M0063)Medicare Number:
-                    <input type="text" class="form-control" name="ptMedicare"
-                    placeholder="include suffix">
-                    <input type="checkbox" name="MedicareNA" class="">NA-No Medicare (M0064)
-                    <br class="">Social Security Number:
-                    <input type="text" class="form-control" name="ptSSS"
-                    placeholder="___-__-____">
-                    <input type="checkbox" name="SSSNA" class="">UK-Unknown or Not Available (M0065)
-                    <br class="">Medicaid Number:
-                    <input type="text" class="form-control" name="ptMedicaid">
-                    <input type="checkbox" name="MedicaidNA" class="">NA-No Medicaid (M0066)
-                    <br class="">(Locator 8)Birth Date:
-                    <input type="date" class="form-control">(Locator 1)Patient HI Claim Number:
-                    <input type="radio" name="ptHIclaim"
-                    value="ptMedicare" class="">1-Same as M0063
-                    <input type="radio" name="ptHIclaim" value="ptMedicaid"
-                    class="">2-Same as M0065
-                    <input type="radio" name="ptHIclaim" value="other" class="">Other:
-                    <input type="text" class="form-control" name="ptHIclaim">
-                </div>
+                <div class="col-md-6">
+					<div class="form-group">
+						<label class="label label-info" for="SoCDate">(M0030)Start of Care Date:</label>					
+						<input type="date" class="form-control input-sm" id="SoCDate" name="SoCDate">			
+					</div> 
+					<div class="form-group">
+						<label class="label label-info" for="RoCDate">(M0032)Resumption of Care Date:</label>					
+						<input type="date" class="form-control input-sm" id="RoCDate" name="RoCDate">			
+					</div>
+					<label class="checkbox">
+						<input type="checkbox" name="checkRoCDate" class="">NA-Not Applicable (M0040)
+					</label>
+                    <br class="">
+					<div class="form-group">
+						<label class="label label-info" for="ptFName">Patient Name:</label>					
+						<input type="text" class="form-control input-sm" id="ptFName" name="ptFName" placeholder="First Name">			
+					</div>
+					<div class="form-group">
+						<label class="label label-info" class="sr-only" for="ptMI">MI:</label>					
+						<input type="text" class="form-control input-sm" id="ptMI" name="ptMI" placeholder="M.I.">			
+					</div>
+					<div class="form-group">
+						<label class="label label-info" class="sr-only" for="ptLName">Last Name:</label>					
+						<input type="text" class="form-control input-sm" id="ptLName" name="ptLName" placeholder="Last Name">			
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="ptTN">Patient Phone:</label>					
+						<input type="text" class="form-control input-sm" id="ptTN" name="ptTN" placeholder="___-___-____">			
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="ptStreetAdd">Patient Address(Locator 6):</label>					
+						<input type="text" class="form-control input-sm" id="ptStreetAdd" name="ptStreetAdd" placeholder="Street/Apt No.">			
+					</div>
+					<div class="form-group">
+						<label class="label label-info" class="sr-only" for="ptCityAdd">City (Locator 6):</label>					
+						<input type="text" class="form-control input-sm" id="ptCityAdd" name="ptCityAdd" placeholder="City">			
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="ptStateAdd">(M0050)(Locator 6)Patient State Residence:</label>					
+						<input type="text" class="form-control input-sm" id="ptStateAdd" name="ptStateAdd" placeholder="__">			
+					</div>
+                    <div class="form-group">
+						<label class="label label-info" for="ptZipAdd">(M0060)(Locator 6)Patient Zip Code:</label>					
+						<input type="text" class="form-control input-sm" id="ptZipAdd" name="ptZipAdd" placeholder="">			
+					</div>
+					<div class="form-group">
+						<label class="label label-info" for="ptMedicare">(M0063)Medicare Number:</label>					
+						<input type="text" class="form-control input-sm" id="ptMedicare" name="ptMedicare" placeholder="include suffix">			
+					</div>
+                    <label class="checkbox">
+						<input type="checkbox" name="MedicareNA" class="">NA-No Medicare (M0064)
+					</label>
+                    <br class="">
+					<div class="form-group">
+						<label class="label label-info" for="ptSSS">Social Security Number:</label>					
+						<input type="text" class="form-control input-sm" id="ptSSS" name="ptSSS" placeholder="___-__-____">			
+					</div>
+					<label class="checkbox">
+						<input type="checkbox" name="SSSNA" class="">UK-Unknown or Not Available (M0065)
+					</label>
+                    <br class="">
+                    <div class="form-group">
+						<label class="label label-info" for="ptMedicaid">Medicaid Number:</label>					
+						<input type="text" class="form-control input-sm" id="ptMedicaid" name="ptMedicaid" placeholder="">			
+					</div>
+					<label class="checkbox">
+						<input type="checkbox" name="MedicaidNA" class="">NA-No Medicaid (M0066)
+					</label>
+                    <br class="">
+                    <div class="form-group">
+						<label class="label label-info" for="ptBD">(Locator 8)Birth Date:</label>					
+						<input type="date" class="form-control input-sm" id="ptBD" name="ptBD" >			
+					</div>
+					
+					<label class="label label-info">(Locator 1)Patient HI Claim Number:</label>
+					<div class="radio">
+						<label class="label label-default">
+							<input type="radio" name="ptHIclaim" value="ptMedicare" class="">
+							1-Same as M0063 
+						</label>
+					</div>
+					<div class="radio">
+						<label class="label label-default">
+							<input type="radio" name="ptHIclaim" value="ptMedicaid" class="">
+							2-Same as M0065 
+						</label>
+					</div>
+					<div class="radio">
+						<label class="label label-default">
+							<input type="radio" name="ptHIclaim" value="other" class="">
+							Other:
+						</label>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control input-sm" name="ptHIclaim">
+					</div>
+					
+				</div>
+			</div>
+				<hr>
+			<div class="row">
+				<div class="col-md-4">
+						<div class="form-group">
+							<label class="label label-info">(M0140) Race/Ethnicity: (Mark all that apply)</label>
+						</div>
+						<label class="checkbox">
+						<input type="checkbox" name="ethnicity" value="American"/>1 - American Indian or Alaska Native
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="ethnicity" value="Asian"/>2 - Asian
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="ethnicity" value="Black"/>3 - Black or African-American
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="ethnicity" value="Hispanic"/>4 - Hispanic or Latino
+						</label>						
+						<label class="checkbox">					
+						<input type="checkbox" name="ethnicity" value="Pacific"/>5 - Native Hawaiian or Pacific Islander
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="ethnicity" value="White"/>6 - White
+						</label>
+				</div>
+				<div class="col-md-8">
+						<div class="form-group">
+							<label class="label label-info">(M0150)Current Payment Sources for Home Care:(Check all that apply)</label>
+						</div>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>0 - None, no charge for current services
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>1 - Medicare (Traditional fee-for-service)
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>2 - Medicare (HMO/managed care/Advantage plan)
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>3 - Medicare ()
+						</label>						
+						<label class="checkbox">					
+						<input type="checkbox" name="pay_source" value=""/>4 - Medicare (HMO/managed care)
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>5 - Workers Compensation
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>6 - Title Program (e.g. Title III, V, or XX)
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>7 - Other Government (e.g. Tricare, VA, etc.)
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>8 - Private Insurance
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>9 - Private HMO/managed care
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>10 - Self-pay
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>11 - Other (specify) <input type="text" class="form-control input-sm" name="other_pay_source"/>
+						</label>
+						<label class="checkbox">
+						<input type="checkbox" name="pay_source" value=""/>12 - UK/unknown
+						</label>
+				</div>
+			</div>
             </form>
         </div>
     
