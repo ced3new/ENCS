@@ -54,7 +54,7 @@
          (M0032)Resumption of Care Date: <input type="date" name="RoCDate"/>
             <input type="checkbox" name="checkRoCDate"/>NA-Not Applicable
 
-         (M0040)Patient Name:<input type="text" name="ptFName" placeholder="First Name"/><input type="text" name="ptMI" placeholder="M.I."/><input type="text" name="ptLName" placeholder="Last Name"/>
+         (M0040)Patient Name: <input type="text" name="ptFName" placeholder="First Name"/><input type="text" name="ptMI" placeholder="M.I."/><input type="text" name="ptLName" placeholder="Last Name"/>
 
 
          Patient Phone:<input type="text" name="ptTN" placeholder="___-___-____"/>
