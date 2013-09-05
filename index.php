@@ -14,7 +14,7 @@
 	<!-- Bootstrap core CSS -->
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Bootstrap theme -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
 
 	<!-- Custom styles for this template -->
 		<link href="encscss.css" rel="stylesheet">
