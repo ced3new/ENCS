@@ -1,0 +1,35 @@
+
+CLINICAL RECORD ITEMS<br>
+()Discipline of Person Completing Assessment:<br>
+<input type="radio" name="PCA" value="RN"/>1 - RN
+<input type="radio" name="PCA" value="PT"/>2 - PT
+<input type="radio" name="PCA" value="SLP/ST"/>3 - SLP/ST
+<input type="radio" name="PCA" value="OT"/>4 - OT
+<br>
+(M0090)Date Assessment Completed:
+<input type="date" name="date_completed"/>
+<br>
+(M0100)This Assessment is Currently Being Completed for the Following Reason: start/Resumption of Care <br>
+<input type="radio" name="form_reason" value="Start"/>1 - Start of care-further visits planned<br>
+<input type="radio" name="form_reason" value="Resume"/>2 - Resumption of care(after inpatient stay)<br>
+
+When ROC, review patient tracking information and complete M0032<br>
+
+(M0102)Date of Physician-ordered Start of Care (Resumption of Care):If the physician indicated a specific start of care(resumption of care)date when the patient was referred for home health service, record the date specified<br>
+<a><input type="date" name="dr_order_SOC"/>[Go to M0110, id date entered]<br>
+<input type="radio" name="NA_dr_order_SOC"/> NA - No specific SOC date ordered by physician</a>
+
+
+/*-----collumn 2--*/
+
+
+(M0104)Date of Referral: Indicate the date that the written or verbal referral for initiation or resumption of care was recieved by the HHA<br>
+<input type="date" name="DoF"/><br>
+
+(M0110)Episode Timing: is the Medicare home health payment episode for which this assessment will define a case mix group an "early" episode or a "later" episode in the patient's current sequence of adjacent Medicare home health payment episodes?<br>
+
+<input type="radio" name="episode_timing" value=""/>1 - Early<br>
+<input type="radio" name="episode_timing" value=""/>2 - Later<br>
+<input type="radio" name="episode_timing" value=""/>3 - UK/Unknown<br>
+<input type="radio" name="episode_timing" value=""/>4 - NA/Not Applicable:No Medicare case mix group to be defined by this assessment<br>
+*Early Episode is first or second episode in a sequence of adjacent episodes, Later is the third episode and beyond in sequence of adjacent episodes. Adjacent episodes are separated by 60 days or fewer between episodes.
